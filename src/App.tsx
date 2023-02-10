@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { MainContext } from "./context";
 import { MyComponent, MyComponent2 } from "./components";
-import { getService } from './api/services'
+import { getService, authenticate} from './api/services'
 function App() {
 
   const [state, setState] = useState<any>({});
@@ -15,7 +15,8 @@ function App() {
         setState,
         user,
         setUser,
-        getService
+        getService,
+        authenticate
       }}
     >
       <div className="App">
